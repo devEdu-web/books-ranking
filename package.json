@@ -1,0 +1,25 @@
+{
+  "name": "books-ranking",
+  "version": "1.0.0",
+  "description": "An application to practice mongoDB with mongoose",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devEdu-web/books-ranking.git"
+  },
+  "author": "Eduardo Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devEdu-web/books-ranking/issues"
+  },
+  "homepage": "https://github.com/devEdu-web/books-ranking#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.2"
+  }
+}
