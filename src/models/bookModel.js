@@ -1,5 +1,5 @@
-import {Schema} from 'mongoose';
-
+import mongoose from 'mongoose';
+const {Schema} = mongoose
 
 const bookSchema = new Schema({
     title:  {
@@ -17,6 +17,8 @@ const bookSchema = new Schema({
         default: 0,
         required: true
     }
-})
+}, {versionKey: false})
 
-export {bookSchema}
+const Book = mongoose.model('Book', bookSchema)
+
+export default {Book}
