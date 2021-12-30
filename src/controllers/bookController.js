@@ -14,4 +14,13 @@ async function postBook(req, res, next) {
     }
 }
 
-export {postBook}
+async function getBooks(req, res, next) {
+    try {
+        const doc = await Book.Book.find({})
+        res.send(doc)
+    } catch(e) {
+        res.send(e)
+    }
+}
+
+export {postBook, getBooks}
