@@ -1,4 +1,7 @@
 import Book from "../models/bookModel.js";
+import mongo from 'mongodb'
+
+const objectId = mongo.ObjectId
 
 async function postBook(req, res, next) {
     const book = new Book.Book(req.body);
@@ -50,4 +53,17 @@ async function deleteBook(req, res, next) {
     }
 }
 
-export { postBook, getBooks, getBook };
+async function updateBook(req, res, next) {
+    const updatedInfo = req.body
+    const bookId = req.params.id
+
+    try {
+        const doc = await Book.Book.updateOne({_id: new objectId(bookId)}, updatedInfo)
+        res.send(doc)
+    } catch (e) {
+        res.send(e)
+    }
+
+}
+
+export { postBook, getBooks, getBook, deleteBook, updateBook };

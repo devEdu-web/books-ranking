@@ -20,6 +20,7 @@
   "homepage": "https://github.com/devEdu-web/books-ranking#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "mongodb": "^4.2.2",
     "mongoose": "^6.1.2"
   }
 }
