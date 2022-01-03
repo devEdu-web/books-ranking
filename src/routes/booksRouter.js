@@ -6,7 +6,7 @@ const router = Router()
 router.get('/all', bookController.getBooks) // Todos os livros
 router.get('/book/:title', bookController.getBook)
 router.post('/addBook', bookController.postBook)
-router.delete('/delete/:title', bookController.deleteBook)
+router.delete('/delete/:id', bookController.deleteBook)
 router.put('/update/:id', bookController.updateBook)
 // buscar um unico livro
 // salvar um livro

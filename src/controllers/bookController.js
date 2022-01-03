@@ -43,10 +43,10 @@ async function getBook(req, res, next) {
 }
 
 async function deleteBook(req, res, next) {
-    const bookTitle = req.params.title;
+    const bookId = req.params.id;
 
     try {
-        const doc = await Book.Book.deleteOne({ title: bookTitle });
+        const doc = await Book.Book.deleteOne({ _id: bookId });
         res.send(doc);
     } catch (e) {
         res.send(e);
